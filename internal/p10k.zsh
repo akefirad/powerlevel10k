@@ -2464,7 +2464,7 @@ prompt_node_version() {
   (( $_p9k__cache_val[1] )) || return
   local v=$_p9k__cache_val[2]
   [[ $v == v?* ]] || return
-  _p9k_prompt_segment "$0" "green" "white" 'NODE_ICON' 0 '' "${${v#v}//\%/%%}"
+  _p9k_prompt_segment "$0" "green" "white" 'NODE_ICON' 0 '' "${${v%%.*}//\%/%%}"
 }
 
 _p9k_prompt_node_version_init() {
